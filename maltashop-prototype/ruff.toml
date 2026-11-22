@@ -1,0 +1,5 @@
+# RECONSTRUCTED in session 3 (the original file was overwritten by mistake). Matches how CI lints: ruff check <service>/app
+line-length = 160
+[lint]
+select = ["E", "F"]
+ignore = ["E701", "E702", "E401"]

@@ -1,0 +1,13 @@
+{
+  "$comment": "Message contract: Order service (consumer of the contract's producer role) -> Payment service. Both repos' tests validate against this file.",
+  "title": "ChargePayment",
+  "type": "object",
+  "required": ["type", "order_id", "customer_id", "total", "payment_token"],
+  "properties": {
+    "type": {"const": "ChargePayment"},
+    "order_id": {"type": "string"},
+    "customer_id": {"type": "string"},
+    "total": {"type": "number", "exclusiveMinimum": 0},
+    "payment_token": {"type": "string"}
+  }
+}

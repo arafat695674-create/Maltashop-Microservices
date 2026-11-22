@@ -1,0 +1,5 @@
+A  POST /v1/orders -> 202 {'order_id': '483f08c2-16fc-40ed-88ee-a43783807d39', 'status': 'PENDING', 'replayed': False} correlation: 7b7d76f1-de3f-41a3-914b-01e31b2260e5
+A  notifications consumed by notification-service: ['OrderPlaced', 'OrderConfirmed']
+B  declined card -> CANCELLED; stock restored: True
+C  same Idempotency-Key twice -> 202 200 same order: True
+ALL SCENARIOS PASSED
